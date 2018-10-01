@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import io.javabrains.Person.NameSort;
+import io.javabrains.Person.PrintList;
+
 public class Unit1Exercise 
 {
 
@@ -67,16 +70,4 @@ public class Unit1Exercise
 		System.out.println( "\nPrinting all people whose last name begins with \"C\"\n" );
 		printerBeginsWith.print( people, "C" );
 	}
-}
-
-@FunctionalInterface
-interface NameSort<T>
-{
-	void sortTwoStrings( String name1, String name2, List<T> list, int position );
-}
-
-@FunctionalInterface
-interface PrintList
-{
-	void print( List<Person> list, String beginsWith );
 }

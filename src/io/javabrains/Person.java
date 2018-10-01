@@ -1,5 +1,7 @@
 package io.javabrains;
 
+import java.util.List;
+
 public class Person 
 {
 	private String firstName;
@@ -48,5 +50,17 @@ public class Person
 	public String toString()
 	{
 		return "Person [firstName = " + firstName + ", lastName = " + lastName + ", age = " + age + "]";
+	}
+	
+	@FunctionalInterface
+	interface NameSort<T>
+	{
+		void sortTwoStrings( String name1, String name2, List<T> list, int position );
+	}
+
+	@FunctionalInterface
+	interface PrintList
+	{
+		void print( List<Person> list, String beginsWith );
 	}
 }
